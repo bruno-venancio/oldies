@@ -401,10 +401,10 @@ EE_NRO_PACOTE        XDATA     0015H
 
 SRAM_BUFFER    XDATA  00000H
 
-SRAM_PONTOS    XDATA  0100H  ; Endereço de inicio dos pontos temporarios na SRAM interna
+SRAM_PONTOS    XDATA  0100H  ; EndereÃ§o de inicio dos pontos temporarios na SRAM interna
 
-SRAM_DATA      XDATA  05FFH  ; Endereço para guardar dados de data e hora
-SRAM_NRO_PACOTE XDATA 060FH  ; Guarda numero de pacote de atualização
+SRAM_DATA      XDATA  05FFH  ; EndereÃ§o para guardar dados de data e hora
+SRAM_NRO_PACOTE XDATA 060FH  ; Guarda numero de pacote de atualizaÃ§Ã£o
 
 
 
@@ -643,7 +643,7 @@ CONTADOR_PONTOS_CONTINUA4:
 CONTADOR_PONTOS_CONTINUA5:
 
          setb MEM_RESET                ; Solta reset da flash
-         setb MEM_WP                   ; Desproteje a memoria contra gravaçao
+         setb MEM_WP                   ; Desproteje a memoria contra gravaÃ§ao
 
          jb BOTAO_GRAVA,CONTINUA_NORMALMENTE
 
@@ -1046,7 +1046,7 @@ LOAD_MINUTE_LAT_LOOP:
 
      mov a,@R0
 
-     cjne a,#'.',ACHA_PONTO_LAT_MINUTE   ; Se achou o ´.´
+     cjne a,#'.',ACHA_PONTO_LAT_MINUTE   ; Se achou o Â´.Â´
 
      dec R0   ; Volta duas casa decimais do minutes
      dec R0
@@ -1091,7 +1091,7 @@ LOAD_DEC_MINUTE_LAT_LOOP:
 
      mov a,@R0
 
-     cjne a,#'.',ACHA_PONTO_LAT_DEC_MINUTE   ; Se achou o ´.´
+     cjne a,#'.',ACHA_PONTO_LAT_DEC_MINUTE   ; Se achou o Â´.Â´
 
      inc R0
 
@@ -1295,7 +1295,7 @@ LOAD_MINUTE_LON_LOOP:
 
      mov a,@R0
 
-     cjne a,#'.',ACHA_PONTO_LON_MINUTE   ; Se achou o ´.´
+     cjne a,#'.',ACHA_PONTO_LON_MINUTE   ; Se achou o Â´.Â´
 
      dec R0   ; Volta duas casa decimais do minutes
      dec R0
@@ -1341,7 +1341,7 @@ LOAD_DEC_MINUTE_LON_LOOP:
 
      mov a,@R0
 
-     cjne a,#'.',ACHA_PONTO_LON_DEC_MINUTE   ; Se achou o ´.´
+     cjne a,#'.',ACHA_PONTO_LON_DEC_MINUTE   ; Se achou o Â´.Â´
 
      inc R0
 
@@ -1881,7 +1881,7 @@ CALCULA_DISTANCIA:
 
          jnc DEU_POSITIVO_X
 
-         ;Se deu negativo, então realiza um complemento 2 em 32bits e deixa
+         ;Se deu negativo, entÃ£o realiza um complemento 2 em 32bits e deixa
          ;somente a magnitude
 
          clr     C
@@ -1964,7 +1964,7 @@ DEU_POSITIVO_X:
 
          jnc DEU_POSITIVO_Y
 
-         ;Se deu negativo, então realiza um complemento 2 em 32bits e deixa
+         ;Se deu negativo, entÃ£o realiza um complemento 2 em 32bits e deixa
          ;somente a magnitude
 
          clr     C
@@ -2222,8 +2222,6 @@ $INCLUDE(ESP.INC)
 
 db 'Curinga GPS mod.VN100 WIFI'
 db 'Software & hardware By Bruno Marcio Diogo Venancio 2006-16'
-db 'Email: bruno.marcio@bol.com.br'
-db 'www.curingagps.com.br'
 db 'Pietro, meu filho, papai te ama!'
 
 
